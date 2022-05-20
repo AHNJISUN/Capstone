@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/petInoDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:buttonTint="#F8BBD0"
+        android:fontFamily="@font/main_font"
+        android:text="광견병"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/petInoAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_font"
+        android:text="종합백신"
+        android:buttonTint="#F8BBD0"
+        app:layout_constraintStart_toStartOf="@+id/petInoDog"
+        app:layout_constraintTop_toBottomOf="@+id/petInoDog" />
+
+    <CheckBox
+        android:id="@+id/petInoCovid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_font"
+        android:text="코로나"
+        android:buttonTint="#F8BBD0"
+        app:layout_constraintStart_toStartOf="@+id/petInoAll"
+        app:layout_constraintTop_toBottomOf="@+id/petInoAll" />
+
+    <CheckBox
+        android:id="@+id/petInoKen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/main_font"
+        android:text="켄넬코프"
+        android:buttonTint="#F8BBD0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/petInoCovid"
+        app:layout_constraintTop_toBottomOf="@+id/petInoCovid" />
+</androidx.constraintlayout.widget.ConstraintLayout>

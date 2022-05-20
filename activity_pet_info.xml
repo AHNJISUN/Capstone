@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PetInfoActivity">
+
+    <ScrollView
+        android:id="@+id/parentScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentIn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@id/parentScroll"
+            app:layout_constraintEnd_toEndOf="@id/parentScroll"
+            app:layout_constraintStart_toStartOf="@id/parentScroll"
+            app:layout_constraintTop_toTopOf="@id/parentScroll">
+
+            <TextView
+                android:id="@+id/petInfoText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/mainC"
+                android:padding="10dp"
+                android:text="강아지 정보 등록"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="@id/parentIn"
+                app:layout_constraintStart_toStartOf="@id/parentIn"
+                app:layout_constraintTop_toTopOf="@id/parentIn" />
+
+            <EditText
+                android:id="@+id/petnameEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:fontFamily="@font/main_font"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toEndOf="@+id/nameText"
+                app:layout_constraintTop_toBottomOf="@+id/petInfoText" />
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:text="이름"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/parentIn"
+                app:layout_constraintTop_toTopOf="@+id/petnameEdit" />
+
+            <EditText
+                android:id="@+id/petbreedEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:fontFamily="@font/main_font"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toEndOf="@+id/breedText"
+                app:layout_constraintTop_toBottomOf="@+id/petnameEdit" />
+
+            <TextView
+                android:id="@+id/breedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="품종"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/nameText"
+                app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+            <TextView
+                android:id="@+id/genderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="성별"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/breedText"
+                app:layout_constraintTop_toBottomOf="@+id/breedText" />
+
+            <TextView
+                android:id="@+id/ageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="나이"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/genderText"
+                app:layout_constraintTop_toBottomOf="@+id/genderText" />
+
+            <TextView
+                android:id="@+id/neuteringText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="중성화"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/ageText"
+                app:layout_constraintTop_toBottomOf="@+id/ageText" />
+
+            <TextView
+                android:id="@+id/gravityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="체중"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/neuteringText"
+                app:layout_constraintTop_toBottomOf="@+id/neuteringText" />
+
+            <TextView
+                android:id="@+id/foodText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="사료"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/gravityText"
+                app:layout_constraintTop_toBottomOf="@+id/gravityText" />
+
+            <TextView
+                android:id="@+id/idcardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="인식칩"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/foodText"
+                app:layout_constraintTop_toBottomOf="@+id/foodText" />
+
+            <TextView
+                android:id="@+id/medicineText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="먹는약"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/idcardText"
+                app:layout_constraintTop_toBottomOf="@+id/idcardText" />
+
+            <TextView
+                android:id="@+id/inoculationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="예방접종"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/medicineText"
+                app:layout_constraintTop_toBottomOf="@+id/medicineText" />
+
+            <TextView
+                android:id="@+id/photoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="사진"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/inoculationText"
+                app:layout_constraintTop_toBottomOf="@+id/inoculationText" />
+
+            <EditText
+                android:id="@+id/petageEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:fontFamily="@font/main_font"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/PetGenderGroup"
+                app:layout_constraintTop_toBottomOf="@+id/PetGenderGroup" />
+
+            <EditText
+                android:id="@+id/petgravityEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:fontFamily="@font/main_font"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toEndOf="@+id/neuteringText"
+                app:layout_constraintTop_toBottomOf="@+id/PetNeuteringGroup" />
+
+            <EditText
+                android:id="@+id/petfoodEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:fontFamily="@font/main_font"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/petgravityEdit"
+                app:layout_constraintTop_toBottomOf="@+id/petgravityEdit" />
+
+            <EditText
+                android:id="@+id/petidcardEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:fontFamily="@font/main_font"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/petfoodEdit"
+                app:layout_constraintTop_toBottomOf="@+id/petfoodEdit" />
+
+            <RadioGroup
+                android:id="@+id/PetGenderGroup"
+                android:orientation="horizontal"
+                android:layout_width="200dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/petbreedEdit"
+                app:layout_constraintTop_toBottomOf="@+id/petbreedEdit">
+
+
+
+                    <RadioButton
+                        android:id="@+id/pet_womenRbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="여자" />
+
+                    <RadioButton
+                        android:id="@+id/pet_menRbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="남자" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/PetNeuteringGroup"
+                android:orientation="horizontal"
+                android:layout_width="200dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/petageEdit"
+                app:layout_constraintTop_toBottomOf="@+id/petageEdit">
+                    <RadioButton
+                        android:id="@+id/pet_neuteringOkRbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="했어요" />
+
+                    <RadioButton
+                        android:id="@+id/pet_neuteringNoRbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="안 했어요" />
+            </RadioGroup>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="220dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/PetInoculationGroup"
+                app:layout_constraintTop_toBottomOf="@+id/PetInoculationGroup">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="@id/cardView"
+                    app:layout_constraintEnd_toEndOf="@id/cardView"
+                    app:layout_constraintStart_toStartOf="@id/cardView"
+                    app:layout_constraintTop_toTopOf="@id/cardView">
+
+                    <ImageView
+                        android:id="@+id/pet_photoImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:layout_constraintBottom_toBottomOf="@id/cardIn"
+                        app:layout_constraintEnd_toEndOf="@id/cardIn"
+                        app:layout_constraintStart_toStartOf="@id/cardIn"
+                        app:layout_constraintTop_toTopOf="@id/cardIn"
+                        app:srcCompat="@drawable/plus" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/submitokBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="#F2E2E2"
+                android:fontFamily="@font/main_font"
+                android:text="확인"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+            <RadioGroup
+                android:id="@+id/PetMediGroup"
+                android:orientation="horizontal"
+                android:layout_width="180dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/petidcardEdit"
+                app:layout_constraintTop_toBottomOf="@+id/petidcardEdit">
+                    <RadioButton
+                        android:id="@+id/petmedi_ok_Rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="먹어요" />
+
+                    <RadioButton
+                        android:id="@+id/petmedi_no_Rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="안먹어요" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/PetInoculationGroup"
+                android:orientation="horizontal"
+                android:layout_width="182dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@+id/PetMediGroup"
+                app:layout_constraintTop_toBottomOf="@+id/PetMediGroup">
+                    <RadioButton
+                        android:id="@+id/pet_inoculation_ok_Rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="했어요" />
+
+                    <RadioButton
+                        android:id="@+id/pet_inoculation_no_Rbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/main_font"
+                        android:text="안했어요" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

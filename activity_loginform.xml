@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginformActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintIn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/userIdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="아이디"
+            android:fontFamily="@font/main_font"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#F2E2E2"
+            android:text="회원가입"
+            android:textSize="34sp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/userPwdView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="비밀번호"
+            android:fontFamily="@font/main_font"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/userIdView"
+            app:layout_constraintTop_toBottomOf="@+id/userIdView" />
+
+        <Button
+            android:id="@+id/id_Overlab_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#F2E2E2"
+            android:text="중복확인"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toEndOf="@+id/userIdView"
+            app:layout_constraintTop_toTopOf="@+id/userIdView" />
+
+        <EditText
+            android:id="@+id/userPwdTwoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="비밀번호 확인"
+            android:fontFamily="@font/main_font"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/userPwdView"
+            app:layout_constraintTop_toBottomOf="@+id/userPwdView" />
+
+        <EditText
+            android:id="@+id/userNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="이름"
+            android:fontFamily="@font/main_font"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/userPwdTwoView"
+            app:layout_constraintTop_toBottomOf="@+id/userPwdTwoView" />
+
+        <EditText
+            android:id="@+id/userEmailView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="이메일"
+            android:fontFamily="@font/main_font"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/userNameView"
+            app:layout_constraintTop_toBottomOf="@+id/userNameView" />
+
+        <EditText
+            android:id="@+id/EmailCodeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="이메일 인증코드"
+            android:fontFamily="@font/main_font"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/userEmailView"
+            app:layout_constraintTop_toBottomOf="@+id/userEmailView" />
+
+        <Button
+            android:id="@+id/email_code_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#F2E2E2"
+            android:text="인증코드전송"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toEndOf="@+id/userEmailView"
+            app:layout_constraintTop_toTopOf="@+id/userEmailView" />
+
+        <EditText
+            android:id="@+id/userBirthView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:hint="생년월일 (ex.941211)"
+            android:fontFamily="@font/main_font"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/EmailCodeView"
+            app:layout_constraintTop_toBottomOf="@+id/EmailCodeView" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:orientation="horizontal"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/userBirthView"
+            app:layout_constraintTop_toTopOf="@+id/userBirthView">
+
+                <RadioButton
+                    android:id="@+id/radioWomenBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="여성"
+                    android:fontFamily="@font/main_font"/>
+
+                <RadioButton
+                    android:id="@+id/radioMenBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="남성"
+                    android:fontFamily="@font/main_font"/>
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/termsRadioGroup"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/constraintIn"
+            app:layout_constraintStart_toStartOf="@+id/userBirthView"
+            app:layout_constraintTop_toBottomOf="@+id/userBirthView">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioBtn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="이용약관 동의"
+                    android:fontFamily="@font/main_font"/>
+
+                <RadioButton
+                    android:id="@+id/radioBtn2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="개인정보 취급방침 동의"
+                    android:fontFamily="@font/main_font"/>
+
+                <RadioButton
+                    android:id="@+id/radioBtn3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="마케팅 정보 수신 동의"
+                    android:fontFamily="@font/main_font"/>
+            </LinearLayout>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#F2E2E2"
+            android:text="확인"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintBottom_toBottomOf="@+id/termsRadioGroup"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

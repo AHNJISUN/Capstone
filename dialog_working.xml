@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TimePicker
+        android:id="@+id/workingTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/repeatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text=" 반복 >"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/workingTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/workingTimePicker" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatText">
+
+        <CheckBox
+            android:id="@+id/checkBoxMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:text="월"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/checkBoxTue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="화"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxMon"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxMon" />
+
+        <CheckBox
+            android:id="@+id/checkBoxWen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxTue"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxTue" />
+
+        <CheckBox
+            android:id="@+id/checkBoxThu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="목"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxWen"
+            app:layout_constraintTop_toTopOf="@+id/checkBoxWen" />
+
+        <CheckBox
+            android:id="@+id/checkBoxFri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="금"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toStartOf="@+id/checkBoxMon"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxMon" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:text="토"
+            android:textColor="#5B4CE8"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxFri"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxMon" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:text="일"
+            android:textColor="#F60303"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxSat"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxTue" />
+
+        <CheckBox
+            android:id="@+id/checkBoxNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="안함"
+            android:fontFamily="@font/main_font"
+            app:layout_constraintStart_toEndOf="@+id/checkBoxSun"
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxWen" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

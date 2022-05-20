@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/feed"
+            android:layout_width="84dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="270dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/feed" />
+
+        <ImageView
+            android:id="@+id/health"
+            android:layout_width="89dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@+id/feed"
+            app:layout_constraintTop_toTopOf="@+id/feed"
+            app:srcCompat="@drawable/health" />
+
+        <ImageView
+            android:id="@+id/camera"
+            android:layout_width="103dp"
+            android:layout_height="91dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@+id/health"
+            app:layout_constraintTop_toTopOf="@+id/health"
+            app:srcCompat="@drawable/camera" />
+
+        <ImageView
+            android:id="@+id/alarm"
+            android:layout_width="108dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/camera"
+            app:layout_constraintTop_toTopOf="@+id/camera"
+            app:srcCompat="@drawable/alarm" />
+
+        <ImageView
+            android:id="@+id/pet"
+            android:layout_width="292dp"
+            android:layout_height="388dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="376dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/maltese" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

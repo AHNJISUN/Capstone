@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/submitBtn2"
+        android:layout_width="123dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="28dp"
+        android:text="확인"
+        android:fontFamily="@font/main_font"
+        app:backgroundTint="#F2E2E2"
+        app:layout_constraintBottom_toTopOf="@+id/IDBtn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputAuthen"
+        app:layout_constraintTop_toBottomOf="@+id/authenCodeBtn" />
+
+    <EditText
+        android:id="@+id/inputAuthen"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="80dp"
+        android:ems="10"
+        android:fontFamily="@font/main_font"
+        android:hint="인증코드 번호 입력"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/submitBtn2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/authenCodeBtn" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:fontFamily="@font/main_font"
+        android:hint="이메일 입력"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/authenCodeBtn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/authenCodeBtn" />
+
+    <Button
+        android:id="@+id/IDBtn2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="아이디 찾기"
+        android:fontFamily="@font/main_font"
+        app:backgroundTint="#F2E2E2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitBtn2" />
+
+    <Button
+        android:id="@+id/authenCodeBtn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="인증코드 전송"
+        android:fontFamily="@font/main_font"
+        app:backgroundTint="#F2E2E2"
+        app:layout_constraintBottom_toTopOf="@+id/submitBtn2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputEmail"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
